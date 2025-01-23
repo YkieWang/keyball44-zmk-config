@@ -1,10 +1,15 @@
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <layouts/yutingwang/keyball/keyball44.dtsi>
+
+&yutingwang_keyball44_layout {
+    transform = <&default_transform>;
+};
 
 / {
     chosen {
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform;
+        zmk,physical-layout = &yutingwang_keyball44_layout;
     };
 
     default_transform: keymap_transform_0 {
