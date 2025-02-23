@@ -81,10 +81,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB           &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR       &kp PERCENT              &kp CARET  &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
-&kp LEFT_SHIFT    &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp GRAVE                &kp MINUS  &kp EQUAL      &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp LESS_THAN          &kp GREATER_THAN
-&kp LEFT_COMMAND  &mmv MOVE_LEFT   &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans                   &kp UNDER  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PIPE               &kp TILDE
-&mkp LCLK         &mkp RCLK        &trans        &trans          &trans                            &trans  &trans                                                                                   &trans
+&kp TAB           &kp EXCLAMATION  &kp AT_SIGN   &kp HASH        &kp DOLLAR       &kp PERCENT                 &kp CARET  &kp AMPERSAND  &kp ASTERISK      &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BSPC
+&kp LEFT_SHIFT    &kp LEFT         &kp UP_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp GRAVE                   &kp MINUS  &kp EQUAL      &kp LEFT_BRACE    &kp RIGHT_BRACE       &kp LESS_THAN          &kp GREATER_THAN
+&kp LEFT_COMMAND  &msc SCRL_UP     &mkp LCLK     &mkp MCLK       &mkp RCLK        &msc SCRL_DOWN              &kp UNDER  &kp PLUS       &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &kp PIPE               &kp TILDE
+&mkp LCLK         &mkp RCLK        &trans        &trans          &trans                               &trans  &trans                                                                                   &trans
             >;
         };
 
