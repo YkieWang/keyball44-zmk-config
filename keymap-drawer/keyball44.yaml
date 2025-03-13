@@ -1,3 +1,4 @@
+layout: {zmk_keyboard: keyball44}
 layers:
   QWRT:
   - $$mdi:keyboard-tab$$
@@ -15,7 +16,7 @@ layers:
   - $$mdi:apple-keyboard-shift$$
   - A
   - S
-  - D
+  - {t: D, h: SCROLL}
   - {t: F, h: FUN}
   - G
   - H
@@ -240,7 +241,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
