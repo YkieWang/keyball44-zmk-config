@@ -60,9 +60,21 @@
 };
 
 / {
-  trackball_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
+    trackball_listener {
+        compatible = "zmk,input-listener";
+        device = <&trackball>;
+    };
+    
+    device_detector {
+        compatible = "zmk,device-detector";
+        status = "okay";
+        io-channels = <&adc 2>; // 使用ADC通道2，可根据实际硬件配置调整
+        sampling-hz = <5>;      // 每秒采样5次
+        detection-delay-ms = <100>; // 识别延迟（去抖动）
+        voltage-ranges = <500 1000 1000 1500 1500 2000 2000 2500 2500 3000>; // 电压范围定义
+    };
+};
 
-  };
+&adc {
+    status = "okay";
 };
