@@ -1,0 +1,21 @@
+/*
+ * Copyright (c) 2023 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+/ {
+    device_detector {
+        compatible = "zmk,device-detector";
+        status = "okay";
+        io-channels = <&adc 0>;  // 使用ADC通道0 (A1/D19, GPIO P0.02)
+        sampling-hz = <2>;       // 每秒采样2次
+        detection-delay-ms = <50>; // 检测延迟（去抖动时间）
+        
+        /*
+         * 电压范围定义（毫伏）：
+         * [旋钮_最小, 旋钮_最大, 摇杆_最小, 摇杆_最大, 轨迹球_最小, 轨迹球_最大, 滑块_最小, 滑块_最大, 其他_最小, 其他_最大]
+         */
+        voltage-ranges = <500 1000 1000 1500 1500 2000 2000 2500 2500 3000>;
+    };
+}; 
