@@ -16,6 +16,6 @@ manifest:
       revision: main
     - name: zmk-device-detector
       remote: device-detector
-      revision: main
+      revision: dev/sputnik
   self:
     path: config
