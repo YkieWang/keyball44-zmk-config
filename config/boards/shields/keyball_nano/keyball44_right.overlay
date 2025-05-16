@@ -69,7 +69,7 @@
     device = <&trackball>;
   };
 
-  device_detector_right: device_detector {
+  device_detector: device_detector {
     compatible = "zmk,device-detector";
     status = "okay";
     adc-channel = <0>;  // 使用ADC0通道

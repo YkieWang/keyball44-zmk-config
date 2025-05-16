@@ -22,7 +22,7 @@
 };
 
 / {
-	device_detector_left: device_detector {
+	device_detector: device_detector {
 		compatible = "zmk,device-detector";
 		status = "okay";
 		adc-channel = <0>;  // 使用ADC0通道
