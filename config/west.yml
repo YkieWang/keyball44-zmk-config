@@ -2,6 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/YkieWang
+    - name: device-detector
+      url-base: https://github.com/YkieWang
     - name: inorichi
       url-base: https://github.com/inorichi
   projects:
@@ -9,6 +11,9 @@ manifest:
       remote: zmkfirmware
       revision: feat/pointers-move-scroll-keyball41
       import: app/west.yml
+    - name: zmk-device-detector
+      remote: device-detector
+      revision: dev/sputnik
     - name: zmk-pmw3610-driver
       remote: inorichi
       revision: main
