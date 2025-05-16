@@ -13,6 +13,20 @@
         zmk,device_detector = &device_detector;
     };
 
+    device_detector {
+        compatible = "zmk,device-detector";
+        status = "okay";
+        
+        adc-channel = <0>;
+        voltage-ranges = <
+            0 500    // 旋钮
+            501 1000 // 摇杆
+            1001 1500 // 轨迹球
+            1501 2000 // 滑块
+            2001 3300 // 其他
+        >;
+    };
+
     default_transform: keymap_transform_0 {
 		compatible = "zmk,matrix-transform";
         columns = <12>;
