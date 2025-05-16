@@ -16,3 +16,22 @@
 		, <&pro_micro 9 GPIO_ACTIVE_HIGH>
 		;
 };
+
+&adc {
+	status = "okay";
+};
+
+/ {
+	device_detector_left: device_detector {
+		compatible = "zmk,device-detector";
+		status = "okay";
+		adc-channel = <0>;  // 使用ADC0通道
+		voltage-ranges = <
+			0 500    // 旋钮
+			501 1000 // 摇杆
+			1001 1500 // 轨迹球
+			1501 2000 // 滑块
+			2001 3300 // 其他
+		>;
+	};
+};

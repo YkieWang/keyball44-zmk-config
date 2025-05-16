@@ -10,6 +10,7 @@
         zephyr,display = &oled;
         zmk,kscan = &kscan0;
         zmk,physical-layout = &yutingwang_keyball44_layout;
+        zmk,device_detector = &device_detector;
     };
 
     default_transform: keymap_transform_0 {
