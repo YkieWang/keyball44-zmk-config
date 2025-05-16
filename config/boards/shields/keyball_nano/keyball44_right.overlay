@@ -72,7 +72,7 @@
   device_detector: device_detector {
     compatible = "zmk,device-detector";
     status = "okay";
-    adc-channel = <0>;  // 使用ADC0通道
+    io-channels = <7>;  // 使用AIN7通道 (P0.31)
     voltage-ranges = <
         0 500    // 旋钮
         501 1000 // 摇杆
