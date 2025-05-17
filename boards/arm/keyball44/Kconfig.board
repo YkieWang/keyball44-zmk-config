@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: MIT
 
 config BOARD_KEYBALL44_LEFT
-  bool "Levels54 Left"
+  bool "Keyball44 Left"
   depends on SOC_NRF52840_QIAA
 
 config BOARD_KEYBALL44_RIGHT
-  bool "Levels54 Right"
+  bool "Keyball44 Right"
   depends on SOC_NRF52840_QIAA
