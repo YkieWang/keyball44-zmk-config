@@ -1,13 +1,16 @@
 file_format: "1"
 id: keyball44
 name: Keyball44
-type: shield
-url: https://github.com/Yowkees/keyball
-requires: [pro_micro]
+type: board
+arch: arm
+url: https://ergokeyboards.com
 features:
   - keys
+  - studio
   - pointer
-  - underglow
+outputs:
+  - usb
+  - ble
 siblings:
   - keyball44_left
   - keyball44_right
