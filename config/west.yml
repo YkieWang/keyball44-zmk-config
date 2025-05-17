@@ -1,13 +1,13 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/YkieWang
+      url-base: https://github.com/zmkfirmware
     - name: inorichi
       url-base: https://github.com/inorichi
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: feat/pointers-move-scroll-keyball41
+      revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: inorichi

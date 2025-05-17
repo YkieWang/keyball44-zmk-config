@@ -1,5 +1,9 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include <layouts/yutingwang/keyball/keyball44.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
+#include <input/processors.dtsi>
+
+#include "keyball44-layouts.dtsi"
+#include "keyball44-pinctrl.dtsi"
 
 &yutingwang_keyball44_layout {
     transform = <&default_transform>;
@@ -39,22 +43,6 @@
     };
 };    
 
-&pinctrl {
-    i2c0_default: i2c0_default {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
-        };
-    };
-
-    i2c0_sleep: i2c0_sleep {
-        group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>,
-                    <NRF_PSEL(TWIM_SCL, 0, 20)>;
-            low-power-enable;
-        };
-    };
-};
 
 &i2c0 {
     status = "okay";
