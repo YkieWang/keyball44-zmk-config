@@ -1,7 +1,0 @@
-/ {
-    layouts_yutingwang_keyball44_position_map: layouts_yutingwang_keyball44_position_map {
-        compatible = "zmk,physical-layout-position-map";
-
-        complete;
-    };
-};

@@ -8,7 +8,7 @@ This file provides guidance to codeflicker when working with code in this reposi
 
 ## WHAT: 技术栈
 
-- 固件框架：ZMK Firmware（自定义 fork：YkieWang/zmk，分支 feat/pointers-move-scroll-keyball41）
+- 固件框架：ZMK Firmware（自定义 fork：ykiewang/zmk，分支 feat/pointers-move-scroll-keyball41）
 - 控制器：Nice Nano v2（nRF52840）× 2
 - 鼠标驱动：inorichi/zmk-pmw3610-driver
 - 配置格式：Devicetree (.dtsi/.overlay) + Kconfig (.conf) + Keymap (.keymap)
