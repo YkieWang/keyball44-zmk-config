@@ -1,5 +1,5 @@
 #include <dt-bindings/zmk/matrix_transform.h>
-#include "layouts/yutingwang/keyball/keyball44.dtsi"
+#include <layouts/yutingwang/keyball/keyball44.dtsi>
 
 &yutingwang_keyball44_layout {
     transform = <&default_transform>;
@@ -27,6 +27,7 @@
 	
     kscan0: kscan {
         compatible = "zmk,kscan-gpio-matrix";
+        label = "KSCAN";
 
         diode-direction = "col2row";
 		row-gpios
