@@ -3,8 +3,10 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include "keyball44.dtsi"
+#include <dt-bindings/input/input-event-codes.h>
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -53,16 +55,29 @@
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
-        irq-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-	scroll-layers = <5>;
-	snipe-layers = <6>;
+        motion-gpios = <&gpio1 11 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        zephyr,axis-x = <INPUT_REL_X>;
+        zephyr,axis-y = <INPUT_REL_Y>;
+        res-cpi = <800>;
+        invert-x;
+        smart-mode;
     };
 };
 
 / {
-  trackball_listener {
+  trackball_listener: trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
+    input-processors = <&zip_xy_scaler 1 4>;
 
+    scroll_layers: scroll_layers {
+      layers = <5>;
+      input-processors = <&zip_xy_to_scroll_mapper>;
+    };
+
+    snipe_layers: snipe_layers {
+      layers = <6>;
+      input-processors = <&zip_xy_scaler 1 8>;
+    };
   };
 };
